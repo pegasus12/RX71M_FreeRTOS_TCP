@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="ZERO" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="ZEro"/>
+			<item value="BUFF"/>
+			<item value="ipconfigTCP_MSS"/>
+			<item value="R_ETHER_LinkProcess"/>
+			<item value="R_ETHER_LinkProcess(0)"/>
+			<item value="xPHYLinkStatus"/>
+			<item value="prvEMACDeferredInterruptHandlerTask"/>
+			<item value="xBytesReceived"/>
+			<item value="xTaskToNotify"/>
+			<item value="InitializeNetwork"/>
+			<item value="ether_link_check_task_handle"/>
+			<item value="ipconfigREPLY_TO_INCOMING_PINGS"/>
+			<item value="ulApplicationGetNextSequenceNumber"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="296" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="1143" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

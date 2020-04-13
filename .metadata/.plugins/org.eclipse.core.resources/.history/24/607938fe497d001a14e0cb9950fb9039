@@ -1,0 +1,51 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables
+C_SRCS += \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_ARP.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_DHCP.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_DNS.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_IP.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_Sockets.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_Stream_Buffer.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_IP.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_WIN.c \
+../src/FreeRTOS-Plus-TCP/source/FreeRTOS_UDP_IP.c 
+
+COMPILER_OBJS += \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_ARP.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_DHCP.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_DNS.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_IP.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_Sockets.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_Stream_Buffer.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_IP.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_WIN.obj \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_UDP_IP.obj 
+
+C_DEPS += \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_ARP.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_DHCP.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_DNS.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_IP.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_Sockets.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_Stream_Buffer.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_IP.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_TCP_WIN.d \
+src/FreeRTOS-Plus-TCP/source/FreeRTOS_UDP_IP.d 
+
+# Each subdirectory must supply rules for building sources it contributes
+src/FreeRTOS-Plus-TCP/source/%.obj: ../src/FreeRTOS-Plus-TCP/source/%.c src/FreeRTOS-Plus-TCP/source/Compiler.sub
+	@echo 'Scanning and building file: $<'
+	@echo 'Invoking: Scanner and Compiler'
+	@echo src\FreeRTOS-Plus-TCP\source\cDepSubCommand.tmp=
+	@sed -e "s/^/ /" "src\FreeRTOS-Plus-TCP\source\cDepSubCommand.tmp"
+	ccrx -subcommand="src\FreeRTOS-Plus-TCP\source\cDepSubCommand.tmp" -output=dep="$(@:%.obj=%.d)"  -MT="$(@:%.d=%.obj)"  -MT="$(@:%.obj=%.d)" "$<"
+	@echo src\FreeRTOS-Plus-TCP\source\cSubCommand.tmp=
+	@sed -e "s/^/ /" "src\FreeRTOS-Plus-TCP\source\cSubCommand.tmp"
+	ccrx -subcommand="src\FreeRTOS-Plus-TCP\source\cSubCommand.tmp" "$<"
+	@echo 'Finished Scanning and building: $<'
+	@echo.
+

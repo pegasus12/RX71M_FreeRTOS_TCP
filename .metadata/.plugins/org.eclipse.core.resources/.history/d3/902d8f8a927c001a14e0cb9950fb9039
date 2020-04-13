@@ -1,0 +1,188 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+-include makefile.init
+
+RM := rm -rf *.sni *.dbg *.lst *.lis *.lpp *.map *.x *.lbp *.bls *.libelf *.rel *.lbk *.abs *.mi *.jmp *.fsy 1st/*.abs 1st/*.jmp 1st/*.fsy
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include src/smc_gen/r_flash_rx/src/flash_type_3/subdir.mk
+-include src/smc_gen/r_byteq/src/subdir.mk
+-include src/smc_gen/r_ether_rx/src/subdir.mk
+-include src/FreeRTOS-Plus-TCP/source/subdir.mk
+-include src/smc_gen/r_tfat_driver_rx/src/device/sdmem/subdir.mk
+-include src/smc_gen/r_tfat_driver_rx/src/device/usb/subdir.mk
+-include src/smc_gen/r_usb_basic/src/driver/subdir.mk
+-include src/smc_gen/r_flash_rx/src/flash_type_4/subdir.mk
+-include src/frtos_startup/subdir.mk
+-include src/smc_gen/r_s12ad_rx/src/targets/rx71m/subdir.mk
+-include src/FreeRTOS/Source/subdir.mk
+-include src/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include src/smc_gen/general/subdir.mk
+-include src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/subdir.mk
+-include src/smc_gen/r_flash_rx/src/flash_type_1/subdir.mk
+-include src/smc_gen/r_cmt_rx/src/subdir.mk
+-include src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/subdir.mk
+-include src/subdir.mk
+-include src/smc_gen/r_sys_time_rx/src/subdir.mk
+-include src/smc_gen/r_tfat_driver_rx/src/subdir.mk
+-include src/smc_gen/r_ether_rx/src/targets/rx71m/subdir.mk
+-include src/smc_gen/r_pincfg/subdir.mk
+-include src/smc_gen/r_s12ad_rx/src/subdir.mk
+-include src/smc_gen/r_bsp/board/generic_rx71m/subdir.mk
+-include src/smc_gen/r_sci_rx/src/subdir.mk
+-include src/FreeRTOS/Source/portable/Renesas/RX600v2/subdir.mk
+-include src/smc_gen/r_sci_rx/src/targets/rx71m/subdir.mk
+-include src/smc_gen/r_ether_rx/src/phy/subdir.mk
+-include src/smc_gen/r_bsp/mcu/all/subdir.mk
+-include src/smc_gen/r_usb_basic/src/hw/subdir.mk
+-include src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/subdir.mk
+-include src/smc_gen/r_flash_rx/src/subdir.mk
+-include src/smc_gen/r_bsp/mcu/rx71m/subdir.mk
+-include src/smc_gen/r_usb_hmsc/src/subdir.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif 
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif 
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif 
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif 
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif 
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif 
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif 
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif 
+ifneq ($(strip $(SX_DEPS)),)
+-include $(SX_DEPS)
+endif 
+ifneq ($(strip $(JMP_DEPS)),)
+-include $(JMP_DEPS)
+endif 
+ifneq ($(strip $(SRC_DEPS)),)
+-include $(SRC_DEPS)
+endif 
+ifneq ($(strip $(PP_DEPS)),)
+-include $(PP_DEPS)
+endif 
+ifneq ($(strip $(P_DEPS)),)
+-include $(P_DEPS)
+endif 
+ifneq ($(strip $(FSY_DEPS)),)
+-include $(FSY_DEPS)
+endif 
+endif
+
+ifneq ($(strip $(SRC_UPPER_SRCS)),)
+ALL_ASMS += $(SRC_UPPER_SRCS) 
+endif
+ifneq ($(strip $(SRC_SRCS)),)
+ALL_ASMS += $(SRC_SRCS) 
+endif
+ifneq ($(strip $(S_UPPER_SRCS)),)
+ALL_ASMS += $(S_UPPER_SRCS) 
+endif
+ifneq ($(strip $(S_SRCS)),)
+ALL_ASMS += $(S_SRCS) 
+endif
+
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables
+LINKER_OUTPUT_OUTPUTS += \
+RX71M_RTOS.abs
+
+LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS += \
+RX71M_RTOS.lib
+
+OBJS := \
+$(COMPILER_OBJS) \
+$(INDIVIDUAL_COMPILER_OBJS) \
+$(ASSEMBLER_OBJS) \
+$(CUSTOM_OBJS)
+
+# All Target
+all: $(LINKER_OUTPUT_OUTPUTS) RX71M_RTOS.x
+
+	@echo 'Build complete.'
+
+RX71M_RTOS.abs: $(OBJS)  $(ALL_ASMS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)   \
+D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\smc_gen\r_tfat_rx\lib\tfat_rx600_little.lib
+	@echo 'Invoking: Linker'
+	@echo 'Building target:'
+	@echo LinkerRX71M_RTOS.tmp=
+	@sed -e "s/^/    /" "LinkerRX71M_RTOS.tmp"
+	rlink -subcommand="LinkerRX71M_RTOS.tmp"
+	@echo 'Finished building target:'
+	@echo.
+
+
+RX71M_RTOS.lib: 
+	@echo 'Invoking: Library Generator'
+	@echo LibraryGeneratorRX71M_RTOS.tmp=
+	@sed -e "s/^/    /" "LibraryGeneratorRX71M_RTOS.tmp"
+	lbgrx -subcommand="LibraryGeneratorRX71M_RTOS.tmp"
+	@echo 'Finished building:'
+	@echo.
+
+RX71M_RTOS.x: RX71M_RTOS.abs
+		-C:\Renesas\e2_studio\Utilities\\ccrx\renesas_cc_converter.exe RX71M_RTOS.abs RX71M_RTOS.x
+
+# Other Targets
+clean:
+	-$(RM) $(LINKER_OUTPUT_OUTPUTS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)
+	-rm -rf src/smc_gen/r_flash_rx/src/flash_type_3/*.obj src/smc_gen/r_flash_rx/src/flash_type_3/*.d src/smc_gen/r_flash_rx/src/flash_type_3/*.asm src/smc_gen/r_flash_rx/src/flash_type_3/*.p src/smc_gen/r_flash_rx/src/flash_type_3/*.pp src/smc_gen/r_flash_rx/src/flash_type_3/*.src src/smc_gen/r_flash_rx/src/flash_type_3/*.jmp src/smc_gen/r_flash_rx/src/flash_type_3/*.lst src/smc_gen/r_flash_rx/src/flash_type_3/*.prn src/smc_gen/r_flash_rx/src/flash_type_3/*.i 
+	-rm -rf src/smc_gen/r_byteq/src/*.obj src/smc_gen/r_byteq/src/*.d src/smc_gen/r_byteq/src/*.asm src/smc_gen/r_byteq/src/*.p src/smc_gen/r_byteq/src/*.pp src/smc_gen/r_byteq/src/*.src src/smc_gen/r_byteq/src/*.jmp src/smc_gen/r_byteq/src/*.lst src/smc_gen/r_byteq/src/*.prn src/smc_gen/r_byteq/src/*.i 
+	-rm -rf src/smc_gen/r_ether_rx/src/*.obj src/smc_gen/r_ether_rx/src/*.d src/smc_gen/r_ether_rx/src/*.asm src/smc_gen/r_ether_rx/src/*.p src/smc_gen/r_ether_rx/src/*.pp src/smc_gen/r_ether_rx/src/*.src src/smc_gen/r_ether_rx/src/*.jmp src/smc_gen/r_ether_rx/src/*.lst src/smc_gen/r_ether_rx/src/*.prn src/smc_gen/r_ether_rx/src/*.i 
+	-rm -rf src/FreeRTOS-Plus-TCP/source/*.obj src/FreeRTOS-Plus-TCP/source/*.d src/FreeRTOS-Plus-TCP/source/*.asm src/FreeRTOS-Plus-TCP/source/*.p src/FreeRTOS-Plus-TCP/source/*.pp src/FreeRTOS-Plus-TCP/source/*.src src/FreeRTOS-Plus-TCP/source/*.jmp src/FreeRTOS-Plus-TCP/source/*.lst src/FreeRTOS-Plus-TCP/source/*.prn src/FreeRTOS-Plus-TCP/source/*.i 
+	-rm -rf src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.obj src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.d src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.asm src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.p src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.pp src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.src src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.jmp src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.lst src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.prn src/smc_gen/r_tfat_driver_rx/src/device/sdmem/*.i 
+	-rm -rf src/smc_gen/r_tfat_driver_rx/src/device/usb/*.obj src/smc_gen/r_tfat_driver_rx/src/device/usb/*.d src/smc_gen/r_tfat_driver_rx/src/device/usb/*.asm src/smc_gen/r_tfat_driver_rx/src/device/usb/*.p src/smc_gen/r_tfat_driver_rx/src/device/usb/*.pp src/smc_gen/r_tfat_driver_rx/src/device/usb/*.src src/smc_gen/r_tfat_driver_rx/src/device/usb/*.jmp src/smc_gen/r_tfat_driver_rx/src/device/usb/*.lst src/smc_gen/r_tfat_driver_rx/src/device/usb/*.prn src/smc_gen/r_tfat_driver_rx/src/device/usb/*.i 
+	-rm -rf src/smc_gen/r_usb_basic/src/driver/*.obj src/smc_gen/r_usb_basic/src/driver/*.d src/smc_gen/r_usb_basic/src/driver/*.asm src/smc_gen/r_usb_basic/src/driver/*.p src/smc_gen/r_usb_basic/src/driver/*.pp src/smc_gen/r_usb_basic/src/driver/*.src src/smc_gen/r_usb_basic/src/driver/*.jmp src/smc_gen/r_usb_basic/src/driver/*.lst src/smc_gen/r_usb_basic/src/driver/*.prn src/smc_gen/r_usb_basic/src/driver/*.i 
+	-rm -rf src/smc_gen/r_flash_rx/src/flash_type_4/*.obj src/smc_gen/r_flash_rx/src/flash_type_4/*.d src/smc_gen/r_flash_rx/src/flash_type_4/*.asm src/smc_gen/r_flash_rx/src/flash_type_4/*.p src/smc_gen/r_flash_rx/src/flash_type_4/*.pp src/smc_gen/r_flash_rx/src/flash_type_4/*.src src/smc_gen/r_flash_rx/src/flash_type_4/*.jmp src/smc_gen/r_flash_rx/src/flash_type_4/*.lst src/smc_gen/r_flash_rx/src/flash_type_4/*.prn src/smc_gen/r_flash_rx/src/flash_type_4/*.i 
+	-rm -rf src/frtos_startup/*.obj src/frtos_startup/*.d src/frtos_startup/*.asm src/frtos_startup/*.p src/frtos_startup/*.pp src/frtos_startup/*.src src/frtos_startup/*.jmp src/frtos_startup/*.lst src/frtos_startup/*.prn src/frtos_startup/*.i 
+	-rm -rf src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.obj src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.d src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.asm src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.p src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.pp src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.src src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.jmp src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.lst src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.prn src/smc_gen/r_s12ad_rx/src/targets/rx71m/*.i 
+	-rm -rf src/FreeRTOS/Source/*.obj src/FreeRTOS/Source/*.d src/FreeRTOS/Source/*.asm src/FreeRTOS/Source/*.p src/FreeRTOS/Source/*.pp src/FreeRTOS/Source/*.src src/FreeRTOS/Source/*.jmp src/FreeRTOS/Source/*.lst src/FreeRTOS/Source/*.prn src/FreeRTOS/Source/*.i 
+	-rm -rf src/FreeRTOS/Source/portable/MemMang/*.obj src/FreeRTOS/Source/portable/MemMang/*.d src/FreeRTOS/Source/portable/MemMang/*.asm src/FreeRTOS/Source/portable/MemMang/*.p src/FreeRTOS/Source/portable/MemMang/*.pp src/FreeRTOS/Source/portable/MemMang/*.src src/FreeRTOS/Source/portable/MemMang/*.jmp src/FreeRTOS/Source/portable/MemMang/*.lst src/FreeRTOS/Source/portable/MemMang/*.prn src/FreeRTOS/Source/portable/MemMang/*.i 
+	-rm -rf src/smc_gen/general/*.obj src/smc_gen/general/*.d src/smc_gen/general/*.asm src/smc_gen/general/*.p src/smc_gen/general/*.pp src/smc_gen/general/*.src src/smc_gen/general/*.jmp src/smc_gen/general/*.lst src/smc_gen/general/*.prn src/smc_gen/general/*.i 
+	-rm -rf src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.obj src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.d src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.asm src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.p src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.pp src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.src src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.jmp src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.lst src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.prn src/smc_gen/r_tfat_driver_rx/src/device/usb_mini/*.i 
+	-rm -rf src/smc_gen/r_flash_rx/src/flash_type_1/*.obj src/smc_gen/r_flash_rx/src/flash_type_1/*.d src/smc_gen/r_flash_rx/src/flash_type_1/*.asm src/smc_gen/r_flash_rx/src/flash_type_1/*.p src/smc_gen/r_flash_rx/src/flash_type_1/*.pp src/smc_gen/r_flash_rx/src/flash_type_1/*.src src/smc_gen/r_flash_rx/src/flash_type_1/*.jmp src/smc_gen/r_flash_rx/src/flash_type_1/*.lst src/smc_gen/r_flash_rx/src/flash_type_1/*.prn src/smc_gen/r_flash_rx/src/flash_type_1/*.i 
+	-rm -rf src/smc_gen/r_cmt_rx/src/*.obj src/smc_gen/r_cmt_rx/src/*.d src/smc_gen/r_cmt_rx/src/*.asm src/smc_gen/r_cmt_rx/src/*.p src/smc_gen/r_cmt_rx/src/*.pp src/smc_gen/r_cmt_rx/src/*.src src/smc_gen/r_cmt_rx/src/*.jmp src/smc_gen/r_cmt_rx/src/*.lst src/smc_gen/r_cmt_rx/src/*.prn src/smc_gen/r_cmt_rx/src/*.i 
+	-rm -rf src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.obj src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.d src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.asm src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.p src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.pp src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.src src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.jmp src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.lst src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.prn src/FreeRTOS-Plus-TCP/source/portable/BufferManagement/*.i 
+	-rm -rf src/*.obj src/*.d src/*.asm src/*.p src/*.pp src/*.src src/*.jmp src/*.lst src/*.prn src/*.i 
+	-rm -rf src/smc_gen/r_sys_time_rx/src/*.obj src/smc_gen/r_sys_time_rx/src/*.d src/smc_gen/r_sys_time_rx/src/*.asm src/smc_gen/r_sys_time_rx/src/*.p src/smc_gen/r_sys_time_rx/src/*.pp src/smc_gen/r_sys_time_rx/src/*.src src/smc_gen/r_sys_time_rx/src/*.jmp src/smc_gen/r_sys_time_rx/src/*.lst src/smc_gen/r_sys_time_rx/src/*.prn src/smc_gen/r_sys_time_rx/src/*.i 
+	-rm -rf src/smc_gen/r_tfat_driver_rx/src/*.obj src/smc_gen/r_tfat_driver_rx/src/*.d src/smc_gen/r_tfat_driver_rx/src/*.asm src/smc_gen/r_tfat_driver_rx/src/*.p src/smc_gen/r_tfat_driver_rx/src/*.pp src/smc_gen/r_tfat_driver_rx/src/*.src src/smc_gen/r_tfat_driver_rx/src/*.jmp src/smc_gen/r_tfat_driver_rx/src/*.lst src/smc_gen/r_tfat_driver_rx/src/*.prn src/smc_gen/r_tfat_driver_rx/src/*.i 
+	-rm -rf src/smc_gen/r_ether_rx/src/targets/rx71m/*.obj src/smc_gen/r_ether_rx/src/targets/rx71m/*.d src/smc_gen/r_ether_rx/src/targets/rx71m/*.asm src/smc_gen/r_ether_rx/src/targets/rx71m/*.p src/smc_gen/r_ether_rx/src/targets/rx71m/*.pp src/smc_gen/r_ether_rx/src/targets/rx71m/*.src src/smc_gen/r_ether_rx/src/targets/rx71m/*.jmp src/smc_gen/r_ether_rx/src/targets/rx71m/*.lst src/smc_gen/r_ether_rx/src/targets/rx71m/*.prn src/smc_gen/r_ether_rx/src/targets/rx71m/*.i 
+	-rm -rf src/smc_gen/r_pincfg/*.obj src/smc_gen/r_pincfg/*.d src/smc_gen/r_pincfg/*.asm src/smc_gen/r_pincfg/*.p src/smc_gen/r_pincfg/*.pp src/smc_gen/r_pincfg/*.src src/smc_gen/r_pincfg/*.jmp src/smc_gen/r_pincfg/*.lst src/smc_gen/r_pincfg/*.prn src/smc_gen/r_pincfg/*.i 
+	-rm -rf src/smc_gen/r_s12ad_rx/src/*.obj src/smc_gen/r_s12ad_rx/src/*.d src/smc_gen/r_s12ad_rx/src/*.asm src/smc_gen/r_s12ad_rx/src/*.p src/smc_gen/r_s12ad_rx/src/*.pp src/smc_gen/r_s12ad_rx/src/*.src src/smc_gen/r_s12ad_rx/src/*.jmp src/smc_gen/r_s12ad_rx/src/*.lst src/smc_gen/r_s12ad_rx/src/*.prn src/smc_gen/r_s12ad_rx/src/*.i 
+	-rm -rf src/smc_gen/r_bsp/board/generic_rx71m/*.obj src/smc_gen/r_bsp/board/generic_rx71m/*.d src/smc_gen/r_bsp/board/generic_rx71m/*.asm src/smc_gen/r_bsp/board/generic_rx71m/*.p src/smc_gen/r_bsp/board/generic_rx71m/*.pp src/smc_gen/r_bsp/board/generic_rx71m/*.src src/smc_gen/r_bsp/board/generic_rx71m/*.jmp src/smc_gen/r_bsp/board/generic_rx71m/*.lst src/smc_gen/r_bsp/board/generic_rx71m/*.prn src/smc_gen/r_bsp/board/generic_rx71m/*.i 
+	-rm -rf src/smc_gen/r_sci_rx/src/*.obj src/smc_gen/r_sci_rx/src/*.d src/smc_gen/r_sci_rx/src/*.asm src/smc_gen/r_sci_rx/src/*.p src/smc_gen/r_sci_rx/src/*.pp src/smc_gen/r_sci_rx/src/*.src src/smc_gen/r_sci_rx/src/*.jmp src/smc_gen/r_sci_rx/src/*.lst src/smc_gen/r_sci_rx/src/*.prn src/smc_gen/r_sci_rx/src/*.i 
+	-rm -rf src/FreeRTOS/Source/portable/Renesas/RX600v2/*.obj src/FreeRTOS/Source/portable/Renesas/RX600v2/*.d src/FreeRTOS/Source/portable/Renesas/RX600v2/*.asm src/FreeRTOS/Source/portable/Renesas/RX600v2/*.p src/FreeRTOS/Source/portable/Renesas/RX600v2/*.pp src/FreeRTOS/Source/portable/Renesas/RX600v2/*.src src/FreeRTOS/Source/portable/Renesas/RX600v2/*.jmp src/FreeRTOS/Source/portable/Renesas/RX600v2/*.lst src/FreeRTOS/Source/portable/Renesas/RX600v2/*.prn src/FreeRTOS/Source/portable/Renesas/RX600v2/*.i 
+	-rm -rf src/smc_gen/r_sci_rx/src/targets/rx71m/*.obj src/smc_gen/r_sci_rx/src/targets/rx71m/*.d src/smc_gen/r_sci_rx/src/targets/rx71m/*.asm src/smc_gen/r_sci_rx/src/targets/rx71m/*.p src/smc_gen/r_sci_rx/src/targets/rx71m/*.pp src/smc_gen/r_sci_rx/src/targets/rx71m/*.src src/smc_gen/r_sci_rx/src/targets/rx71m/*.jmp src/smc_gen/r_sci_rx/src/targets/rx71m/*.lst src/smc_gen/r_sci_rx/src/targets/rx71m/*.prn src/smc_gen/r_sci_rx/src/targets/rx71m/*.i 
+	-rm -rf src/smc_gen/r_ether_rx/src/phy/*.obj src/smc_gen/r_ether_rx/src/phy/*.d src/smc_gen/r_ether_rx/src/phy/*.asm src/smc_gen/r_ether_rx/src/phy/*.p src/smc_gen/r_ether_rx/src/phy/*.pp src/smc_gen/r_ether_rx/src/phy/*.src src/smc_gen/r_ether_rx/src/phy/*.jmp src/smc_gen/r_ether_rx/src/phy/*.lst src/smc_gen/r_ether_rx/src/phy/*.prn src/smc_gen/r_ether_rx/src/phy/*.i 
+	-rm -rf src/smc_gen/r_bsp/mcu/all/*.obj src/smc_gen/r_bsp/mcu/all/*.d src/smc_gen/r_bsp/mcu/all/*.asm src/smc_gen/r_bsp/mcu/all/*.p src/smc_gen/r_bsp/mcu/all/*.pp src/smc_gen/r_bsp/mcu/all/*.src src/smc_gen/r_bsp/mcu/all/*.jmp src/smc_gen/r_bsp/mcu/all/*.lst src/smc_gen/r_bsp/mcu/all/*.prn src/smc_gen/r_bsp/mcu/all/*.i 
+	-rm -rf src/smc_gen/r_usb_basic/src/hw/*.obj src/smc_gen/r_usb_basic/src/hw/*.d src/smc_gen/r_usb_basic/src/hw/*.asm src/smc_gen/r_usb_basic/src/hw/*.p src/smc_gen/r_usb_basic/src/hw/*.pp src/smc_gen/r_usb_basic/src/hw/*.src src/smc_gen/r_usb_basic/src/hw/*.jmp src/smc_gen/r_usb_basic/src/hw/*.lst src/smc_gen/r_usb_basic/src/hw/*.prn src/smc_gen/r_usb_basic/src/hw/*.i 
+	-rm -rf src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.obj src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.d src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.asm src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.p src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.pp src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.src src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.jmp src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.lst src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.prn src/FreeRTOS-Plus-TCP/source/portable/NetworkInterface/RX/*.i 
+	-rm -rf src/smc_gen/r_flash_rx/src/*.obj src/smc_gen/r_flash_rx/src/*.d src/smc_gen/r_flash_rx/src/*.asm src/smc_gen/r_flash_rx/src/*.p src/smc_gen/r_flash_rx/src/*.pp src/smc_gen/r_flash_rx/src/*.src src/smc_gen/r_flash_rx/src/*.jmp src/smc_gen/r_flash_rx/src/*.lst src/smc_gen/r_flash_rx/src/*.prn src/smc_gen/r_flash_rx/src/*.i 
+	-rm -rf src/smc_gen/r_bsp/mcu/rx71m/*.obj src/smc_gen/r_bsp/mcu/rx71m/*.d src/smc_gen/r_bsp/mcu/rx71m/*.asm src/smc_gen/r_bsp/mcu/rx71m/*.p src/smc_gen/r_bsp/mcu/rx71m/*.pp src/smc_gen/r_bsp/mcu/rx71m/*.src src/smc_gen/r_bsp/mcu/rx71m/*.jmp src/smc_gen/r_bsp/mcu/rx71m/*.lst src/smc_gen/r_bsp/mcu/rx71m/*.prn src/smc_gen/r_bsp/mcu/rx71m/*.i 
+	-rm -rf src/smc_gen/r_usb_hmsc/src/*.obj src/smc_gen/r_usb_hmsc/src/*.d src/smc_gen/r_usb_hmsc/src/*.asm src/smc_gen/r_usb_hmsc/src/*.p src/smc_gen/r_usb_hmsc/src/*.pp src/smc_gen/r_usb_hmsc/src/*.src src/smc_gen/r_usb_hmsc/src/*.jmp src/smc_gen/r_usb_hmsc/src/*.lst src/smc_gen/r_usb_hmsc/src/*.prn src/smc_gen/r_usb_hmsc/src/*.i 
+	@echo
+	@echo 'Clean complete.'
+
+.PHONY: all clean 
+-include ../makefile.targets

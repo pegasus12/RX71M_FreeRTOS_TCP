@@ -1,0 +1,20 @@
+-isa=rxv2
+-fpu
+-include="C:\Program Files (x86)\Renesas\RX\3_2_0\include"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\FreeRTOS\Source\include"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\FreeRTOS\Source\portable\Renesas\RX600v2"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\frtos_startup"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\frtos_config"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\smc_gen\r_bsp"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\smc_gen\r_config"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\smc_gen\general"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\smc_gen\r_pincfg" 
+-define=DEBUG_CONSOLE
+-lang=c99
+-utf8
+-nomessage
+-output=obj
+-obj_path="src/smc_gen/r_bsp/mcu/all"
+-debug
+-outcode=utf8
+-nologo 

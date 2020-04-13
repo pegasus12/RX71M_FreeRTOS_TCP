@@ -1,0 +1,9 @@
+-isa=rxv2
+-fpu
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\FreeRTOS\Source\include"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\FreeRTOS\Source\portable\Renesas\RX600v2"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\frtos_startup"
+-include="D:\Renesas\RSKRX71M\RTOS\workspace1\RX71M_RTOS\src\frtos_config" 
+-utf8
+-debug
+-nologo 
